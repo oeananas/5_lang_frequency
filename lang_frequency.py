@@ -10,8 +10,9 @@ def load_data(file_path):
 
 
 def get_most_frequent_words(text):
-    qt_words = collections.Counter(re.findall(r'\w+', text))
-    return qt_words.most_common(10)
+    all_words_in_text = collections.Counter(re.findall(r'\w+', text))
+    most_frequent_ten_words = all_words_in_text.most_common(10)
+    return most_frequent_ten_words
 
 
 if __name__ == '__main__':
