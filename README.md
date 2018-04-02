@@ -1,6 +1,6 @@
 # Frequency Analysis of Words
 
-Программма предназначена для работы с текстовыми файлами. В качестве аргумента при запуске скрипта указывается путь до текстового файла. Скрипт выводит на экран 10 самых часто встречающихся слов в тексте и число повторений в порядке убывания.
+The program is designed to work with text files. As an argument, when you run the script, you specify the path to the text file. The script displays the 10 most common words in the text and the number of repetitions in descending order.
 
 # Quickstart
 
