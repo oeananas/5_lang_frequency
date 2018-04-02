@@ -11,8 +11,9 @@ def load_data(file_path):
 
 def get_most_frequent_words(text):
     all_words_in_text = collections.Counter(re.findall(r'\w+', text))
-    most_frequent_ten_words = all_words_in_text.most_common(10)
-    return most_frequent_ten_words
+    number_of_words_for_output = 10
+    most_frequent_words = all_words_in_text.most_common(number_of_words_for_output)
+    return most_frequent_words
 
 
 if __name__ == '__main__':
@@ -24,3 +25,4 @@ if __name__ == '__main__':
             print(words_and_counts[0], ": ", words_and_counts[1], sep='')
     except FileNotFoundError:
         exit("File not found")
+
