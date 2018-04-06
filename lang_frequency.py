@@ -9,7 +9,7 @@ def load_data(file_path):
         return content
 
 
-def get_count_words(text):
+def get_most_frequent_words(text):
     return collections.Counter(re.findall(r'\w+', text.lower()))
 
 
@@ -17,11 +17,10 @@ if __name__ == '__main__':
     if len(sys.argv) == 1:
         exit('Need input file path as parameter')
     try:
-        most_frequent_words = get_count_words(load_data(sys.argv[1]))
-        num_of_words = 10
-        print('The most common words in the text:')
-        for word, count in most_frequent_words.most_common(num_of_words):
-            print(word, count)
-
+        most_frequent_words = get_most_frequent_words(load_data(sys.argv[1]))
     except FileNotFoundError:
         exit('File not found')
+    num_of_words = 10
+    print('The most common words in the text:')
+    for word, count in most_frequent_words.most_common(num_of_words):
+        print(word, count)
